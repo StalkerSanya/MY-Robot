@@ -9,3 +9,5 @@ Then you need to open console and enter comands in you workspace:
 
 ROBOT DISCRIPTION: robot-platform with 4 wheels and base (big cylinder) each of wheels attached to 2 links. Together 2 links 
 can rotate and so my robot can move around center of base. Also he can turn using small radius of turning.
+
+SCREENS OF MY ROBOT IN GAZEBO: "Screenshot robot_gazebo1.jpg", "Screenshot robot_gazebo2.jpg"
