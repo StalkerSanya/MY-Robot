@@ -22,4 +22,6 @@ View from another side
 
 ## ROBOT CONTROL
 Control of robot launches by launch "xacro.launch". So "xacro.launch" create node which opens file "movesctript.py" for control.
-Video which shows movemaent of each joint is located in /MY-Robot/videos_robot/movement_all_joints.webm
+
+Video below shows movemaent of each joint:
+ - link to video: https://www.youtube.com/watch?v=6L06_kYmk1I
