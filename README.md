@@ -1,14 +1,11 @@
 # MY FIRST ROBOT
 
-## GOAL: 
-learning more about linux, ros, urdf, gazebo, rviz
-
 ## INSTRUCTION OF LAUNCH
 If you want to see my robot in gazebo you need to download from my repository package(folder) "my_robot_gazebo" in folder "src" which is located in your workspace. Then you need to open console and enter comands in your workspace:
 ```
 source devel/setup.bash
 catkin_make
-roslaunch my_robot_gazebo begin.launch 
+roslaunch my_robot_gazebo xacro.launch 
 ```
 
 ## ROBOT DESCRIPTION 
@@ -22,3 +19,7 @@ View from one side
 
 View from another side
 ![screenshot of sample](https://github.com/StalkerSanya/MY-Robot/blob/master/screens_robot/Screenshot_robot_gazebo1.jpg)  
+
+## ROBOT CONTROL
+Control of robot launches by launch "xacro.launch". So "xacro.launch" create node which opens file "movesctript.py" for control.
+Video which shows movemaent of each joint is located in /MY-Robot/videos_robot/movement_all_joints.webm
