@@ -25,3 +25,11 @@ Control of robot launches by launch "xacro.launch". So "xacro.launch" create nod
 
 Video below shows movemaent of each joint:
  - link to video: https://www.youtube.com/watch?v=6L06_kYmk1I
+
+## SENSOR CAMERA
+For moving wheel with camera and create 5 pictures you can launch "xacro.launch", which launches 2 node for launching 2 scripts with publisher and subscriber. 
+
+- Location 5 pictures from camera: /MY-Robot/screens_robot/
+
+Video below shows that all work:
+ - link to video: https://youtu.be/D4T99M6cHCM
