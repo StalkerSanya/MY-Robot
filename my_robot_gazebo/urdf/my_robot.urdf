@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<robot name ="my_robot">
+	<link name = "world"/> 
+	
+	<link name ="base_link"> 
+		<visual>
+			<geometry>
+				<cylinder length = "0.6" radius = "1.85"/>
+			</geometry>
+			<origin xyz ="0 0 1.2"/>
+		</visual>
+		<collision>
+        </collision>
+        <inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>	
+	</link>
+	<joint name = "world_to_base" type= "fixed">
+		<parent link = "world"/>
+		<child link = "base_link"/>
+		<origin xyz = "0 0 -0.9"/>
+	</joint> 
+
+<!--link 1 --> 
+	<link name = "first_leg">
+		<visual>
+			<geometry> 
+				<cylinder length = "0.26" radius = "0.45"/>
+			</geometry>
+			<origin xyz = "0 0 -0.13"/>
+		</visual>	
+		<collision>
+        </collision>
+		<inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>	
+		<visual>
+			<geometry>
+				<box size = "0.5 0.9 0.4"/>
+			</geometry>
+			<origin xyz = " 0 0.2 -0.46"/>
+		</visual>
+		<collision>
+        </collision>
+		<inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>	
+
+	</link>	
+
+	<joint name ="base_to_first_leg" type ="fixed">
+		<parent link ="base_link"/>
+		<child link = "first_leg"/>
+		<origin xyz = "1 1 0.9"/>	
+	</joint>
+
+		<link name = "wheel1">
+			<visual>
+				<geometry>
+					<cylinder length = "0.35" radius = "0.45"/>
+				</geometry>
+				<origin rpy = "1.57 0 0" xyz = "0 0.175 0"/>
+			</visual>
+			<collision>
+        	</collision>
+			<inertial>
+			<mass value="0.5"/> 
+			<inertia ixx="0.01" ixy="0.0" ixz="0.0"
+            	     iyy="0.01" iyz="0.0"
+            	     izz="0.01" />
+      	</inertial>	
+		</link>
+
+		<joint name = "first_leg_to_wheel1" type = "fixed">
+			<parent link = "first_leg"/>
+			<child link = "wheel1"/>
+			<origin xyz = "0 0.65 -0.46"/>
+		</joint>
+				
+
+	<link name = "second_leg">
+		<visual>
+			<geometry> 
+				<cylinder length = "0.26" radius = "0.45"/>
+			</geometry>
+			<origin xyz = "0 0 -0.13"/>
+		</visual>
+		<collision>
+        </collision>
+		<inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>		
+		<visual>
+			<geometry>
+				<box size = "0.5 0.9 0.4"/>
+			</geometry>
+			<origin xyz = " 0 -0.2 -0.46"/>
+		</visual>
+		<collision>
+        </collision>
+		<inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>	
+	</link>	
+
+	<joint name ="base_to_second_leg" type ="fixed">
+		<parent link ="base_link"/>
+		<child link = "second_leg"/>
+		<origin xyz = "-1 -1 0.9"/>	
+	</joint>
+
+		<link name = "wheel2">
+			<visual>
+				<geometry>
+					<cylinder length = "0.35" radius = "0.45"/>
+				</geometry>
+				<origin rpy = "1.57 0 0" xyz = "0 -0.175 0"/>
+			</visual>
+			<collision>
+        	</collision>
+			<inertial>
+        	<mass value="0.5"/> 
+        	<inertia ixx="0.01" ixy="0.0" ixz="0.0"
+        			iyy="0.01" iyz="0.0" 
+                	 izz="0.01" />
+      		</inertial>	
+		</link>
+
+		<joint name = "second_leg_to_wheel2" type = "fixed">
+			<parent link = "second_leg"/>
+			<child link = "wheel2"/>
+			<origin xyz = "0 -0.65 -0.46"/>
+		</joint>
+
+
+
+	<link name = "third_leg">
+		<visual>
+			<geometry> 
+				<cylinder length = "0.26" radius = "0.45"/>
+			</geometry>
+			<origin xyz = "0 0 -0.13"/>
+		</visual>
+		<collision>
+        </collision>
+		<inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>		
+		<visual>
+			<geometry>
+				<box size = "0.5 0.9 0.4"/>
+			</geometry>
+			<origin xyz = " 0 -0.2 -0.46"/>
+		</visual>
+		<collision>
+        </collision>
+		<inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>	
+	</link>	
+
+	<joint name ="base_to_third_leg" type ="fixed">
+		<parent link ="base_link"/>
+		<child link = "third_leg"/>
+		<origin xyz = "1 -1 0.9"/>	
+	</joint>
+
+		<link name = "wheel3">
+			<visual>
+				<geometry>
+					<cylinder length = "0.35" radius = "0.45"/>
+				</geometry>
+				<origin rpy = "1.57 0 0" xyz = "0 -0.175 0"/>
+			</visual>
+			<collision>
+        	</collision>
+			<inertial>
+        	<mass value="0.5"/> 
+       		<inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 	iyy="0.01" iyz="0.0" 
+                 	izz="0.01" />
+      		</inertial>	
+		</link>
+
+		<joint name = "third_leg_to_wheel3" type = "fixed">
+			<parent link = "third_leg"/>
+			<child link = "wheel3"/>
+			<origin xyz = "0 -0.65 -0.46"/>
+		</joint>
+
+
+	<link name = "fourth_leg">
+		<visual>
+			<geometry> 
+				<cylinder length = "0.26" radius = "0.45"/>
+			</geometry>
+			<origin xyz = "0 0 -0.13"/>
+		</visual>
+		<collision>
+        </collision>
+		<inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>		
+		<visual>
+			<geometry>
+				<box size = "0.5 0.9 0.4"/>
+			</geometry>
+			<origin xyz = " 0 0.2 -0.46"/>
+		</visual>
+		<collision>
+        </collision>
+		<inertial>
+        <mass value="0.5"/> 
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" 
+                 izz="0.01" />
+      	</inertial>	
+	</link>	
+
+	<joint name ="base_to_fourth_leg" type ="fixed">
+		<parent link ="base_link"/>
+		<child link = "fourth_leg"/>
+		<origin xyz = "-1 1 0.9"/>	
+	</joint>
+
+		<link name = "wheel4">
+			<visual>
+				<geometry>
+					<cylinder length = "0.35" radius = "0.45"/>
+				</geometry>
+				<origin rpy = "1.57 0 0" xyz = "0 0.175 0"/>
+			</visual>
+			<collision>
+        	</collision>
+			<inertial>
+    	    <mass value="0.5"/> 
+        	<inertia ixx="0.01" ixy="0.0" ixz="0.0"
+            	     iyy="0.01" iyz="0.0" 
+                	 izz="0.01" />
+      		</inertial>	
+		</link>
+
+		<joint name = "fourth_leg_to_wheel4" type = "fixed">
+			<parent link = "fourth_leg"/>
+			<child link = "wheel4"/>
+			<origin xyz = "0 0.65 -0.46"/>
+		</joint>
+</robot>
