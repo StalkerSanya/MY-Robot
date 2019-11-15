@@ -20,8 +20,8 @@ def image_callback(msg):
     else:
     	global j
     	if j < 6:
-    		filename = '/home/sanekcd/my_robot_ws/src/project1/screens_robot/camera_image' + str(j) + '.png'
-        	# Save your OpenCV2 image as a jpeg 
+    		filename = "~/Pictures/camera_img' + str(j) + '.png"
+        	# Save your OpenCV2 image as a png 
        		cv2.imwrite(filename, cv2_img)
         	j = j + 1
        		print("saved")
