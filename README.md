@@ -45,3 +45,5 @@ catkin_make
 source devel/setup.bash
 roslaunch tests test.launch 
 ```
+## CI 
+ - Badge: [![Build Status](https://travis-ci.org/StalkerSanya/yii.svg?branch=CI)](https://travis-ci.org/StalkerSanya/yii)
