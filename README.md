@@ -33,3 +33,15 @@ For moving wheel with camera and create 5 pictures you can launch "xacro.launch"
 
 Video below shows that all work:
  - link to video: https://youtu.be/D4T99M6cHCM
+ 
+## TESTS
+Unit test launches from folder tests/unit_test by command:
+```
+python unit.py
+```
+Integration test launch from your workspace:
+```
+catkin_make
+source devel/setup.bash
+roslaunch tests test.launch 
+```
