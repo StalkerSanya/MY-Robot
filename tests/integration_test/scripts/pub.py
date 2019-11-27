@@ -21,12 +21,12 @@ def my_robot_joint_positions_publisher():
 		pos1 = 30*3.142/180
 		pos2 = 40*3.142/180
 		pos3 = -10*3.142/180
-		pos4 = -20*3.142/180
+		pos4 = -10*3.142/180
 
 		pub1.publish(pos1)
 		pub2.publish(pos2)
 		pub3.publish(pos3)
 		pub4.publish(pos4)
-		rate.sleep() #sle	
+		rate.sleep() #sleep	
 if __name__ == '__main__':
 	my_robot_joint_positions_publisher()
